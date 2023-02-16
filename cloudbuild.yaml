@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/vaulted-cove-378003/github.com/rhon-j-calupitan/test-project:$SHORT_SHA', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', '-t', 'gcr.io/vaulted-cove-378003/github.com/rhon-j-calupitan/test-project:$SHORT_SHA', '.']
